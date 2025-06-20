@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alaa Elmekkawy - Professional CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary-dark: #2c3e50;
+      --primary-medium: #34495e;
+      --text-color: #4a4a4a;
+      --light-bg: #f8f8f8;
+      --white-bg: #ffffff;
+      --accent-color: #00796b;
+      --accent-hover: #004d40;
+      --border-color: #e0e0e0;
+      --skill-bg: #e0f2f1;
+      --skill-text: #00695c;
+      --shadow-color: rgba(0, 0, 0, 0.08);
+      --hover-shadow: rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1000px;
+      background-color: var(--white-bg);
+      box-shadow: 0 4px 20px var(--shadow-color);
+      margin: 40px 0;
+      padding: 2.5rem 2rem;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2em;
+      text-align: center;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 1.6em;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 10px;
+      margin-top: 30px;
+      color: var(--primary-medium);
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.1em;
+      color: var(--primary-medium);
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1em;
+      font-size: 1.05em;
+      line-height: 1.5;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #202b39 0%, #3a455d 100%);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-name {
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-title {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      color: #d1d9e6;
+    }
+
+    .header-cert {
+      display: inline-block;
+      background: rgba(255 255 255 / 0.2);
+      padding: 0.25rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 1px solid rgba(255 255 255 / 0.3);
+      backdrop-filter: blur(6px);
+      color: white;
+      user-select: none;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      background: #f3f4f6;
+      border-bottom: 2px solid #e5e7eb;
+      padding: 1.5rem 2rem;
+      border-radius: 0 0 10px 10px;
+      font-size: 1.1em;
+      color: #3a455d;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem 1rem;
+      word-break: break-word;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact-item a {
+      color: var(--accent-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      background: #1e3c72;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      border-bottom: 3px solid #4365a1;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .experience-item {
+      border-left: 3px solid #e5e7eb;
+      padding-left: 20px;
+      margin-bottom: 32px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      background-color: #f0f9ff;
+      transform: translateY(-4px);
+    }
+
+    .experience-item::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: #3b82f6;
+      border-radius: 50%;
+      position: absolute;
+      left: -7.5px;
+      top: 8px;
+    }
+
+    .skills-category {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--light-bg);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .skills-category:hover {
+      box-shadow: 0 4px 12px var(--shadow-color);
+    }
+
+    .skills-category h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary-medium);
+    }
+
+    .skills-category h3 i {
+      color: var(--accent-color);
+      font-size: 1.2em;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    .skills-list span {
+      background-color: var(--skill-bg);
+      color: #136987;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      white-space: nowrap;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      cursor: default;
+    }
+
+    .skills-list span:hover {
+      background-color: var(--accent-color);
+      color: var(--white-bg);
+      transform: translateY(-2px);
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .achievement-item {
+      background-color: var(--white-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px var(--shadow-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .achievement-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px var(--hover-shadow);
+    }
+
+    .achievement-item i {
+      font-size: 2.5em;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    .achievement-item h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-medium);
+      font-size: 1.3em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .achievement-item p {
+      font-size: 0.95em;
+      color: var(--text-color);
+      margin-bottom: 0;
+    }
+
+    /* Project Gallery Slider */
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px var(--shadow-color);
+      margin-top: 20px;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+
+    .slider-item {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      margin-right: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    .slider-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-color);
+      font-size: 0.9em;
+    }
+
+    footer .contact-info {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.25rem 1rem;
+        margin: 20px 0;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .skills-list {
+        justify-content: center;
+      }
+
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slider-item {
+        max-width: 300px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .slider-item {
+        max-width: 250px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="header">
+      <h1 class="header-name">
+        Alaa <br />
+        Mohammed Ramadan Elmekkawy
+      </h1>
+      <p class="header-title">Project Manager | Civil Engineer | Visionary Project Leader</p>
+      <div class="header-cert">PMP Certified #1908392</div>
+    </header>
+
+    <!-- Contact Info -->
+    <section class="contact-info" aria-label="Contact Information">
+      <div class="contact-item">
+        <a href="mailto:eng.alaa.ae@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope contact-icon" aria-hidden="true"></i> eng.alaa.ae@gmail.com
+        </a>
+      </div>
+      <div class="contact-item">
+        <span><i class="fas fa-phone-alt contact-icon" aria-hidden="true"></i> +20 1002003109</span>
+      </div>
+      <div class="contact-item">
+        <a href="https://sa.linkedin.com/in/alaaelmekkawy" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i> LinkedIn Profile
+        </a>
+      </div>
+      <div class="contact-item">
+        <a href="https://people.bayt.com/alaa-mekkawy/" target="_blank" rel="noopener" aria-label="Bayt Profile">
+          <i class="fas fa-briefcase contact-icon" aria-hidden="true"></i> Bayt Profile
+        </a>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="p-0">
+      <!-- Professional Summary -->
+      <section class="mb-8" aria-labelledby="professional-summary-title">
+        <h2 id="professional-summary-title" class="section-title">PROFESSIONAL SUMMARY</h2>
+        <p>
+          PMP-certified Project Manager and Civil Engineer with over 20 years of exceptional experience overseeing high-profile, multi-million-dollar projects across the UAE, Saudi Arabia, and Egypt.<br /><br />
+          Specialized in managing large-scale infrastructure projects, including residential, industrial, petrochemical, and water treatment systems—ranging from complex vertical and horizontal developments to high-restricted area operations and piling works. Adept at leading diverse, cross-functional teams through the full project lifecycle, ensuring uncompromising standards of quality, safety, and budget adherence.<br />
+          Renowned for exceptional stakeholder management and risk mitigation expertise, effectively balancing technical, commercial, and procurement needs. Fluent in both English and Arabic, with outstanding communication and leadership skills that drive results and consistently exceed project objectives.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title">Core Competencies & Skills</h2>
+        <p>
+          My comprehensive skill set combines deep technical civil engineering knowledge with advanced project management methodologies, ensuring successful project delivery from conception to closeout.
+        </p>
+
+        <div class="skills-category">
+          <h3><i class="fas fa-cogs"></i> Project Management & Leadership:</h3>
+          <div class="skills-list">
+            <span>Project Lifecycle Management</span>
+            <span>Strategic Planning & Execution</span>
+            <span>Team Leadership & Development</span>
+            <span>Stakeholder Management & Engagement</span>
+            <span>Risk Management & Mitigation</span>
+            <span>Schedule Development & Control</span>
+            <span>Budgeting & Cost Control</span>
+            <span>Quality Assurance & Control (QA/QC)</span>
+            <span>Procurement & Subcontractor Management</span>
+            <span>Contract Administration</span>
+            <span>Claims Management</span>
+            <span>Progress Reporting & Performance Monitoring</span>
+            <span>Health, Safety, and Environmental (HSE) Compliance</span>
+            <span>Change Management</span>
+            <span>Project Closeout & Handover</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3><i class="fas fa-hard-hat"></i> Construction & Engineering Expertise:</h3>
+          <div class="skills-list">
+            <span>Residential (Vertical & Horizontal) Construction</span>
+            <span>Industrial & Petrochemical Plant Construction</span>
+            <span>Water & Wastewater Treatment Plant (WWTP) Construction</span>
+            <span>Piling Works (Bentonite, CFA)</span>
+            <span>Structural Design Principles</span>
+            <span>Earthworks & Site Preparation</span>
+            <span>Concrete Technology & Application</span>
+            <span>MEP Coordination</span>
+            <span>Finishing Works (Super Lux, High-Level)</span>
+            <span>Site Supervision & Operations</span>
+            <span>Construction Methodologies</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3><i class="fas fa-laptop-code"></i> Software & Tools:</h3>
+          <div class="skills-list">
+            <span>Primavera P6 (Advanced)</span>
+            <span>AutoCAD (Advanced)</span>
+            <span>Revit (BIM)</span>
+            <span>Microsoft Project</span>
+            <span>Microsoft Office Suite (Word, Excel, PowerPoint)</span>
+            <span>General Project Management Software</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3><i class="fas fa-comments"></i> Interpersonal & Communication:</h3>
+          <div class="skills-list">
+            <span>Exceptional Communication (English & Arabic)</span>
+            <span>Negotiation & Conflict Resolution</span>
+            <span>Problem-Solving & Decision-Making</span>
+            <span>Team Collaboration & Motivation</span>
+            <span>Adaptability & Resilience</span>
+            <span>Mentoring & Coaching</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="mb-8" aria-labelledby="professional-experience-title">
+        <h2 id="professional-experience-title" class="section-title">PROFESSIONAL EXPERIENCE</h2>
+
+        <!-- Experience items (repeat as needed) -->
+        <article class="experience-item" aria-label="Project Manager at Dar Alsharq Contracting and Suppling">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Project Manager</h3>
+              <p class="text-lg text-blue-800 font-semibold">Dar Alsharq Contracting and Suppling</p>
+              <p class="text-gray-600 font-medium">Egypt</p>
+            </div>
+            <time
+              class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+              datetime="2017-07"
+              >July 2017 - Present</time
+            >
+          </div>
+          <div class="space-y-3">
+            <section class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-800 mb-2">8-Floor Residential Building Project</h4>
+              <p class="text-gray-700 mb-2">
+                Executed comprehensive civil and construction works for an 800 sqm residential building in New Cairo City under Armed Forces supervision.
+              </p>
+              <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                <li>Project scope: Basement, ground floor, and six typical floors with four apartments each</li>
+                <li>Coordinated with military supervision authorities</li>
+                <li>Ensured compliance with stringent quality and security requirements</li>
+              </ul>
+            </section>
+            <section class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-800 mb-2">General Civil Works Portfolio</h4>
+              <p class="text-gray-700 mb-2">
+                Delivered diverse civil engineering projects across New Mansoura City, New Capital, and other strategic locations in Egypt.
+              </p>
+              <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                <li>Concrete works, masonry, plastering, tiling, and finishing operations</li>
+                <li>MEP (Mechanical, Electrical, Plumbing) coordination and implementation</li>
+                <li>Quality assurance and project delivery optimization</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <!-- Repeat other experience items similarly (RMCO, EMCO, TCC) -->
+        <!-- For brevity, you can copy your existing content here with the same structure -->
+
+      </section>
+
+      <!-- Education & Certifications -->
+      <section class="mb-8" aria-labelledby="education-certifications-title">
+        <h2 id="education-certifications-title" class="section-title">EDUCATION & CERTIFICATIONS</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+            <div class="flex items-center mb-3">
+              <i class="fas fa-graduation-cap text-blue-800 text-2xl mr-3"></i>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">Bachelor of Civil Engineering</h3>
+                <p class="text-blue-800 font-medium">Mansoura University, Egypt</p>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-2"><strong>Year:</strong> 2003</p>
+            <p class="text-gray-700"><strong>Graduation Project:</strong> Design of Steel Structure (Excellent Grade)</p>
+          </div>
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
+            <div class="flex items-center mb-3">
+              <i class="fas fa-certificate text-green-600 text-2xl mr-3"></i>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">Project Management Professional</h3>
+                <p class="text-green-600 font-medium">PMI Certification</p>
+              </div>
+            </div>
+            <p class="text-gray-700"><strong>PMP Number:</strong> 1908392</p>
+            <p class="text-gray-700"><strong>Status:</strong> Active Certification</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Achievements -->
+      <section class="mb-8" aria-labelledby="key-achievements-title">
+        <h2 id="key-achievements-title" class="section-title">KEY ACHIEVEMENTS</h2>
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <i class="fas fa-trophy text-blue-800 text-xl mb-2" aria-hidden="true"></i>
+            <h4 class="font-semibold text-gray-800">Multi-Million Dollar Projects</h4>
+            <p class="text-gray-600 text-sm">
+              Successfully delivered complex infrastructure projects, consistently exceeding financial targets and client expectations.
+            </p>
+          </div>
+          <div class="achievement-item">
+            <i class="fas fa-shield-alt text-green-600 text-xl mb-2" aria-hidden="true"></i>
+            <h4 class="font-semibold text-gray-800">Zero Safety Incidents</h4>
+            <p class="text-gray-600 text-sm">
+              Maintained exemplary safety records across all major project assignments, fostering a culture of safety excellence.
+            </p>
+          </div>
+          <div class="achievement-item">
+            <i class="fas fa-clock text-purple-600 text-xl mb-2" aria-hidden="true"></i>
+            <h4 class="font-semibold text-gray-800">On-Time Delivery</h4>
+            <p class="text-gray-600 text-sm">
+              Consistent track record of meeting or exceeding project timeline commitments, ensuring efficient project progression.
+            </p>
+          </div>
+          <div class="achievement-item">
+            <i class="fas fa-users text-orange-600 text-xl mb-2" aria-hidden="true"></i>
+            <h4 class="font-semibold text-gray-800">Team Leadership</h4>
+            <p class="text-gray-600 text-sm">
+              Led cross-functional teams of highly skilled professionals across multiple disciplines, driving collaborative success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Gallery Slider -->
+      <section aria-label="Projects Gallery" class="mb-8">
+        <h2 class="section-title">PROJECTS GALLERY</h2>
+        <div class="slider-container" id="project-slider" aria-live="polite" aria-atomic="true">
+          <div class="slider-track" id="slider-track">
+            <div class="slider-item">
+              <img
+                src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20111221.jpg?raw=true"
+                alt="Project 1"
+                loading="lazy"
+              />
+            </div>
+            <div class="slider-item">
+              <img
+                src="https://github.com/alaa-elmekkawy/CV/blob/main/image/20080815041.jpg?raw=true"
+                alt="Project 2"
+                loading="lazy"
+              />
+            </div>
+            <div class="slider-item">
+              <img
+                src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-06-24%2009-17-34%20(1680128).jpg?raw=true"
+                alt="Project 3"
+                loading="lazy"
+              />
+            </div>
+            <div class="slider-item">
+              <img
+                src="https://github.com/alaa-elmekkawy/CV/blob/main/image/2014-08-16%2021-24-34%20(46759104).jpg?raw=true"
+                alt="Project 4"
+                loading="lazy"
+              />
+            </div>
+            <div class="slider-item">
+              <img
+                src="https://github.com/alaa-elmekkawy/CV/blob/main/image/a-0140.jpg?raw=true"
+                alt="Project 5"
+                loading="lazy"
+              />
+            </div>
+            <!-- Add more slider items as needed -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Alaa Elmekkawy. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Simple auto-scroll slider for projects gallery
+    const sliderTrack = document.getElementById('slider-track');
+    let scrollAmount = 0;
+    const scrollStep = 1; // pixels per frame
+    const maxScroll = sliderTrack.scrollWidth - sliderTrack.clientWidth;
+
+    function autoScroll() {
+      scrollAmount += scrollStep;
+      if (scrollAmount >= maxScroll) {
+        scrollAmount = 0;
+      }
+      sliderTrack.style.transform = `translateX(-${scrollAmount}px)`;
+      requestAnimationFrame(autoScroll);
+    }
+
+    if (sliderTrack.scrollWidth > sliderTrack.clientWidth) {
+      requestAnimationFrame(autoScroll);
+    }
+  </script>
+</body>
+</html>
