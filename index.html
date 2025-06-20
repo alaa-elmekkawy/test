@@ -5,235 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alaa Elmekkawy - Professional CV</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-dark: #1F2937; /* Dark slate gray */
-      --primary-medium: #3B82F6; /* Blue-500 */
-      --text-color: #374151; /* Gray-700 */
-      --light-bg: #F9FAFB; /* Gray-50 */
-      --white-bg: #FFFFFF; /* White */
-      --accent-color: #2563EB; /* Blue-600 */
-      --accent-hover: #1D4ED8; /* Blue-700 */
-      --border-color: #E5E7EB; /* Gray-200 */
-      --skill-bg: #DBEAFE; /* Blue-100 */
-      --skill-text: #1E40AF; /* Blue-900 */
-      --shadow-color: rgba(59, 130, 246, 0.15); /* Blue shadow */
-      --hover-shadow: rgba(37, 99, 235, 0.25); /* Blue hover shadow */
+      --dark-blue: #101935;
+      --darker-blue: #0a1124;
+      --dark-gray: #23272f;
+      --medium-blue: #223c63;
+      --accent-blue: #2563eb;
+      --accent-hover: #1d4ed8;
+      --light-bg: #f7f9fb;
+      --white-bg: #fff;
+      --border-color: #2d3646;
+      --skill-bg: #223c63;
+      --skill-text: #e0e7ff;
+      --shadow-color: rgba(16, 25, 53, 0.18);
+      --hover-shadow: rgba(37, 99, 235, 0.25);
     }
-
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--light-bg);
-      color: var(--text-color);
+      background: var(--darker-blue);
+      color: #e3e6eb;
       display: flex;
       justify-content: center;
       min-height: 100vh;
     }
-
     .container {
-      width: 95%;
+      width: 96%;
       max-width: 1000px;
-      background-color: var(--white-bg);
-      box-shadow: 0 4px 20px var(--shadow-color);
+      background: var(--dark-blue);
+      box-shadow: 0 4px 24px var(--shadow-color);
       margin: 40px 0;
       padding: 2.5rem 2rem;
-      border-radius: 10px;
+      border-radius: 12px;
     }
-
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.2em;
       text-align: center;
       line-height: 1.1;
       margin-bottom: 0.5rem;
-      color: white;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-
     h2 {
       font-size: 1.6em;
-      border-bottom: 3px solid var(--primary-medium);
+      border-bottom: 3px solid var(--accent-blue);
       padding-bottom: 8px;
       margin-top: 30px;
-      color: var(--primary-dark);
+      color: #fff;
       font-weight: 700;
     }
-
     h3 {
       font-size: 1.1em;
-      color: var(--primary-medium);
+      color: var(--accent-blue);
       margin-top: 20px;
       font-weight: 600;
     }
-
     p {
       margin-bottom: 1em;
       font-size: 1.05em;
       line-height: 1.5;
+      color: #dbeafe;
     }
-
     .header {
-      background: linear-gradient(135deg, #1F2937 0%, #3B82F6 100%);
-      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--accent-blue) 0%, var(--dark-blue) 100%);
+      padding: 3rem 1rem 2rem 1rem;
       text-align: center;
-      border-radius: 10px 10px 0 0;
+      border-radius: 12px 12px 0 0;
       position: relative;
       overflow: hidden;
     }
-
-    .header-name {
-      font-weight: 700;
-      font-size: 2.4rem;
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-    }
-
     .header-title {
       font-size: 1.25rem;
       font-weight: 300;
       margin-bottom: 1rem;
-      color: #d1d9e6;
+      color: #cbd5e1;
     }
-
     .header-cert {
       display: inline-block;
-      background: rgba(255 255 255 / 0.2);
+      background: rgba(255,255,255,0.07);
       padding: 0.25rem 1rem;
       border-radius: 9999px;
       font-weight: 600;
-      border: 1px solid rgba(255 255 255 / 0.3);
-      backdrop-filter: blur(6px);
-      color: white;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
       user-select: none;
+      margin-top: 0.5rem;
     }
-
     .contact-info {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      background: var(--light-bg);
+      background: var(--dark-gray);
       border-bottom: 2px solid var(--border-color);
       padding: 1.5rem 2rem;
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 12px 12px;
       font-size: 1.1em;
-      color: var(--primary-dark);
+      color: #e0e7ff;
     }
-
     .contact-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--white-bg);
+      background: var(--medium-blue);
       border-radius: 10px;
       box-shadow: 0 2px 10px var(--shadow-color);
       padding: 0.5rem 1rem;
       word-break: break-word;
       transition: transform 0.3s ease;
     }
-
     .contact-item:hover {
       transform: translateY(-2px);
     }
-
     .contact-item a {
-      color: var(--accent-color);
+      color: #a5b4fc;
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
     .contact-item a:hover {
-      color: var(--accent-hover);
+      color: #fff;
       text-decoration: underline;
     }
-
     .contact-icon {
       width: 20px;
       height: 20px;
-      background: var(--primary-dark);
+      background: var(--accent-blue);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: #fff;
       font-size: 0.8rem;
       flex-shrink: 0;
     }
-
     .section-title {
       font-weight: 700;
-      color: var(--primary-dark);
+      color: #fff;
     }
-
     .experience-item {
-      border-left: 3px solid var(--border-color);
+      border-left: 3px solid var(--accent-blue);
       padding-left: 20px;
       margin-bottom: 32px;
       position: relative;
       transition: all 0.3s ease;
+      background: var(--medium-blue);
+      border-radius: 8px;
     }
-
     .experience-item:hover {
-      background-color: #eff6ff;
+      background-color: #1e293b;
       transform: translateY(-4px);
     }
-
     .experience-item::before {
       content: '';
       width: 12px;
       height: 12px;
-      background-color: var(--primary-medium);
+      background-color: var(--accent-blue);
       border-radius: 50%;
       position: absolute;
       left: -7.5px;
-      top: 8px;
+      top: 18px;
     }
-
     .skills-category {
       margin-bottom: 25px;
       padding: 15px;
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      background-color: var(--light-bg);
+      background-color: var(--dark-gray);
       transition: box-shadow 0.3s ease;
     }
-
     .skills-category:hover {
       box-shadow: 0 4px 12px var(--shadow-color);
     }
-
     .skills-category h3 {
       margin-top: 0;
       margin-bottom: 15px;
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--primary-medium);
+      color: var(--accent-blue);
     }
-
     .skills-category h3 i {
-      color: var(--accent-color);
+      color: var(--accent-blue);
       font-size: 1.2em;
     }
-
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: flex-start;
     }
-
     .skills-list span {
       background-color: var(--skill-bg);
       color: var(--skill-text);
@@ -244,52 +210,46 @@
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
       cursor: default;
     }
-
     .skills-list span:hover {
-      background-color: var(--accent-color);
+      background-color: var(--accent-blue);
       color: var(--white-bg);
       transform: translateY(-2px);
     }
-
     .achievements-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       margin-top: 20px;
     }
-
     .achievement-item {
-      background-color: var(--white-bg);
+      background-color: var(--medium-blue);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 2px 8px var(--shadow-color);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #e0e7ff;
     }
-
     .achievement-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 18px var(--hover-shadow);
     }
-
     .achievement-item i {
       font-size: 2.5em;
-      color: var(--accent-color);
+      color: var(--accent-blue);
       margin-bottom: 15px;
     }
-
     .achievement-item h4 {
       font-family: 'Playfair Display', serif;
-      color: var(--primary-dark);
+      color: #fff;
       font-size: 1.3em;
       margin-top: 10px;
       margin-bottom: 10px;
     }
-
     .achievement-item p {
       font-size: 0.95em;
-      color: var(--text-color);
+      color: #dbeafe;
       margin-bottom: 0;
     }
 
@@ -301,14 +261,14 @@
       border-radius: 8px;
       box-shadow: 0 4px 15px var(--shadow-color);
       margin-top: 20px;
+      background: var(--dark-gray);
     }
-
     .slider-track {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      width: max-content;
       will-change: transform;
+      animation: slider-scroll 36s linear infinite;
     }
-
     .slider-item {
       flex-shrink: 0;
       width: 400px;
@@ -316,19 +276,23 @@
       margin-right: 15px;
       border-radius: 5px;
       overflow: hidden;
-      background-color: #e5e7eb;
+      background-color: #1e293b;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
+      color: #fff;
       font-size: 1.2em;
+      box-shadow: 0 2px 8px var(--shadow-color);
     }
-
     .slider-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+    @keyframes slider-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-1 * (400px + 15px) * 15)); }
     }
 
     footer {
@@ -336,65 +300,37 @@
       margin-top: 50px;
       padding-top: 20px;
       border-top: 1px solid var(--border-color);
-      color: var(--text-color);
+      color: #b6c0d1;
       font-size: 0.9em;
     }
 
-    footer .contact-info {
-      margin-bottom: 15px;
-    }
-
     /* Responsive Design */
-    @media (max-width: 768px) {
-      .container {
-        padding: 1.25rem 1rem;
-        margin: 20px 0;
+    @media (max-width: 900px) {
+      .slider-item { width: 300px; height: 180px; }
+      .slider-track {
+        animation: slider-scroll-md 36s linear infinite;
       }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-
-      h3 {
-        font-size: 1.1em;
-      }
-
-      .contact-info {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .skills-list {
-        justify-content: center;
-      }
-
-      .achievements-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .slider-item {
-        width: 300px;
-        height: 200px;
+      @keyframes slider-scroll-md {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-1 * (300px + 15px) * 15)); }
       }
     }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.6em;
+    @media (max-width: 600px) {
+      .container { padding: 1.25rem 0.5rem; }
+      h1 { font-size: 1.3em; }
+      h2 { font-size: 1.1em; }
+      .slider-item { width: 220px; height: 120px; }
+      .slider-track {
+        animation: slider-scroll-sm 36s linear infinite;
       }
-
-      h2 {
-        font-size: 1.3em;
+      @keyframes slider-scroll-sm {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-1 * (220px + 15px) * 15)); }
       }
-
-      .slider-item {
-        width: 250px;
-        height: 180px;
-      }
+    }
+    @media (max-width: 768px) {
+      .contact-info { grid-template-columns: 1fr; gap: 1rem; }
+      .achievements-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -402,7 +338,7 @@
   <div class="container">
     <!-- Header Section -->
     <header class="header">
-      <h1 class="header-name">
+      <h1>
         Alaa <br />
         Mohammed Ramadan Elmekkawy
       </h1>
@@ -433,7 +369,7 @@
     </section>
 
     <!-- Main Content -->
-    <main class="p-0">
+    <main>
       <!-- Professional Summary -->
       <section class="mb-8" aria-labelledby="professional-summary-title">
         <h2 id="professional-summary-title" class="section-title">PROFESSIONAL SUMMARY</h2>
@@ -450,7 +386,6 @@
         <p>
           My comprehensive skill set combines deep technical civil engineering knowledge with advanced project management methodologies, ensuring successful project delivery from conception to closeout.
         </p>
-
         <div class="skills-category">
           <h3><i class="fas fa-cogs"></i> Project Management & Leadership:</h3>
           <div class="skills-list">
@@ -471,7 +406,6 @@
             <span>Project Closeout & Handover</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3><i class="fas fa-hard-hat"></i> Construction & Engineering Expertise:</h3>
           <div class="skills-list">
@@ -488,7 +422,6 @@
             <span>Construction Methodologies</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3><i class="fas fa-laptop-code"></i> Software & Tools:</h3>
           <div class="skills-list">
@@ -500,7 +433,6 @@
             <span>General Project Management Software</span>
           </div>
         </div>
-
         <div class="skills-category">
           <h3><i class="fas fa-comments"></i> Interpersonal & Communication:</h3>
           <div class="skills-list">
@@ -535,53 +467,29 @@
       <!-- Projects Gallery Slider -->
       <section aria-label="Projects Gallery" class="mb-8">
         <h2 class="section-title">PROJECTS GALLERY</h2>
-        <div class="slider-container" id="project-slider" aria-live="polite" aria-atomic="true">
+        <div class="slider-container" aria-live="polite" aria-atomic="true">
           <div class="slider-track" id="slider-track">
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+1" alt="Project 1" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+2" alt="Project 2" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+3" alt="Project 3" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+4" alt="Project 4" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+5" alt="Project 5" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+6" alt="Project 6" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+7" alt="Project 7" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+8" alt="Project 8" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+9" alt="Project 9" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+10" alt="Project 10" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+11" alt="Project 11" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+12" alt="Project 12" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+13" alt="Project 13" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+14" alt="Project 14" loading="lazy" />
-            </div>
-            <div class="slider-item">
-              <img src="https://via.placeholder.com/400x250?text=Project+15" alt="Project 15" loading="lazy" />
-            </div>
+            <!-- 15 original slides -->
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+1" alt="Project 1" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+2" alt="Project 2" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+3" alt="Project 3" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+4" alt="Project 4" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+5" alt="Project 5" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+6" alt="Project 6" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+7" alt="Project 7" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+8" alt="Project 8" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+9" alt="Project 9" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+10" alt="Project 10" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+11" alt="Project 11" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+12" alt="Project 12" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+13" alt="Project 13" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+14" alt="Project 14" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+15" alt="Project 15" /></div>
+            <!-- Duplicate first 4 slides for seamless looping -->
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+1" alt="Project 1 duplicate" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+2" alt="Project 2 duplicate" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+3" alt="Project 3 duplicate" /></div>
+            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+4" alt="Project 4 duplicate" /></div>
           </div>
         </div>
       </section>
@@ -591,26 +499,30 @@
       <p>© 2025 Alaa Elmekkawy. All rights reserved.</p>
     </footer>
   </div>
-
   <script>
-    // Simple auto-scroll slider for projects gallery
+    // Seamless infinite slider reset
     const sliderTrack = document.getElementById('slider-track');
-    let scrollAmount = 0;
-    const scrollStep = 1; // pixels per frame
-    const maxScroll = sliderTrack.scrollWidth - sliderTrack.clientWidth;
+    let animationDuration = 36000; // ms, matches CSS animation duration
+    let isHovered = false;
 
-    function autoScroll() {
-      scrollAmount += scrollStep;
-      if (scrollAmount >= maxScroll) {
-        scrollAmount = 0;
-      }
-      sliderTrack.style.transform = `translateX(-${scrollAmount}px)`;
-      requestAnimationFrame(autoScroll);
+    function resetSlider() {
+      sliderTrack.style.animation = 'none';
+      // Force reflow
+      void sliderTrack.offsetWidth;
+      sliderTrack.style.animation = '';
     }
 
-    if (sliderTrack.scrollWidth > sliderTrack.clientWidth) {
-      requestAnimationFrame(autoScroll);
-    }
+    sliderTrack.addEventListener('animationiteration', resetSlider);
+
+    // Optional: Pause on hover (remove if not desired)
+    sliderTrack.addEventListener('mouseenter', () => {
+      isHovered = true;
+      sliderTrack.style.animationPlayState = 'paused';
+    });
+    sliderTrack.addEventListener('mouseleave', () => {
+      isHovered = false;
+      sliderTrack.style.animationPlayState = 'running';
+    });
   </script>
 </body>
 </html>
