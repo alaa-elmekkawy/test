@@ -1,528 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alaa Elmekkawy - Professional CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --dark-blue: #101935;
-      --darker-blue: #0a1124;
-      --dark-gray: #23272f;
-      --medium-blue: #223c63;
-      --accent-blue: #2563eb;
-      --accent-hover: #1d4ed8;
-      --light-bg: #f7f9fb;
-      --white-bg: #fff;
-      --border-color: #2d3646;
-      --skill-bg: #223c63;
-      --skill-text: #e0e7ff;
-      --shadow-color: rgba(16, 25, 53, 0.18);
-      --hover-shadow: rgba(37, 99, 235, 0.25);
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--darker-blue);
-      color: #e3e6eb;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
-      width: 96%;
-      max-width: 1000px;
-      background: var(--dark-blue);
-      box-shadow: 0 4px 24px var(--shadow-color);
-      margin: 40px 0;
-      padding: 2.5rem 2rem;
-      border-radius: 12px;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2em;
-      text-align: center;
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-      color: #fff;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    h2 {
-      font-size: 1.6em;
-      border-bottom: 3px solid var(--accent-blue);
-      padding-bottom: 8px;
-      margin-top: 30px;
-      color: #fff;
-      font-weight: 700;
-    }
-    h3 {
-      font-size: 1.1em;
-      color: var(--accent-blue);
-      margin-top: 20px;
-      font-weight: 600;
-    }
-    p {
-      margin-bottom: 1em;
-      font-size: 1.05em;
-      line-height: 1.5;
-      color: #dbeafe;
-    }
-    .header {
-      background: linear-gradient(135deg, var(--accent-blue) 0%, var(--dark-blue) 100%);
-      padding: 3rem 1rem 2rem 1rem;
-      text-align: center;
-      border-radius: 12px 12px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .header-title {
-      font-size: 1.25rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
-      color: #cbd5e1;
-    }
-    .header-cert {
-      display: inline-block;
-      background: rgba(255,255,255,0.07);
-      padding: 0.25rem 1rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      user-select: none;
-      margin-top: 0.5rem;
-    }
-    .contact-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      background: var(--dark-gray);
-      border-bottom: 2px solid var(--border-color);
-      padding: 1.5rem 2rem;
-      border-radius: 0 0 12px 12px;
-      font-size: 1.1em;
-      color: #e0e7ff;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--medium-blue);
-      border-radius: 10px;
-      box-shadow: 0 2px 10px var(--shadow-color);
-      padding: 0.5rem 1rem;
-      word-break: break-word;
-      transition: transform 0.3s ease;
-    }
-    .contact-item:hover {
-      transform: translateY(-2px);
-    }
-    .contact-item a {
-      color: #a5b4fc;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .contact-item a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-    .contact-icon {
-      width: 20px;
-      height: 20px;
-      background: var(--accent-blue);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 0.8rem;
-      flex-shrink: 0;
-    }
-    .section-title {
-      font-weight: 700;
-      color: #fff;
-    }
-    .experience-item {
-      border-left: 3px solid var(--accent-blue);
-      padding-left: 20px;
-      margin-bottom: 32px;
-      position: relative;
-      transition: all 0.3s ease;
-      background: var(--medium-blue);
-      border-radius: 8px;
-    }
-    .experience-item:hover {
-      background-color: #1e293b;
-      transform: translateY(-4px);
-    }
-    .experience-item::before {
-      content: '';
-      width: 12px;
-      height: 12px;
-      background-color: var(--accent-blue);
-      border-radius: 50%;
-      position: absolute;
-      left: -7.5px;
-      top: 18px;
-    }
-    .skills-category {
-      margin-bottom: 25px;
-      padding: 15px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      background-color: var(--dark-gray);
-      transition: box-shadow 0.3s ease;
-    }
-    .skills-category:hover {
-      box-shadow: 0 4px 12px var(--shadow-color);
-    }
-    .skills-category h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--accent-blue);
-    }
-    .skills-category h3 i {
-      color: var(--accent-blue);
-      font-size: 1.2em;
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-start;
-    }
-    .skills-list span {
-      background-color: var(--skill-bg);
-      color: var(--skill-text);
-      padding: 8px 15px;
-      border-radius: 8px;
-      font-size: 0.9em;
-      white-space: nowrap;
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-      cursor: default;
-    }
-    .skills-list span:hover {
-      background-color: var(--accent-blue);
-      color: var(--white-bg);
-      transform: translateY(-2px);
-    }
-    .achievements-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-    .achievement-item {
-      background-color: var(--medium-blue);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px var(--shadow-color);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: #e0e7ff;
-    }
-    .achievement-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px var(--hover-shadow);
-    }
-    .achievement-item i {
-      font-size: 2.5em;
-      color: var(--accent-blue);
-      margin-bottom: 15px;
-    }
-    .achievement-item h4 {
-      font-family: 'Playfair Display', serif;
-      color: #fff;
-      font-size: 1.3em;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .achievement-item p {
-      font-size: 0.95em;
-      color: #dbeafe;
-      margin-bottom: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alaa Elmekkawy | Premium Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><style>
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --accent: #0071e3;
+  --card: rgba(255,255,255,0.8);
+}
 
-    /* Project Gallery Slider */
-    .slider-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px var(--shadow-color);
-      margin-top: 20px;
-      background: var(--dark-gray);
-    }
-    .slider-track {
-      display: flex;
-      width: max-content;
-      will-change: transform;
-      animation: slider-scroll 36s linear infinite;
-    }
-    .slider-item {
-      flex-shrink: 0;
-      width: 400px;
-      height: 250px;
-      margin-right: 15px;
-      border-radius: 5px;
-      overflow: hidden;
-      background-color: #1e293b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.2em;
-      box-shadow: 0 2px 8px var(--shadow-color);
-    }
-    .slider-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    @keyframes slider-scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-1 * (400px + 15px) * 15)); }
-    }
+body.dark {
+  --bg: #000;
+  --text: #fff;
+  --card: rgba(30,30,30,0.8);
+}
 
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-color);
-      color: #b6c0d1;
-      font-size: 0.9em;
-    }
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Arial', sans-serif;
+}
 
-    /* Responsive Design */
-    @media (max-width: 900px) {
-      .slider-item { width: 300px; height: 180px; }
-      .slider-track {
-        animation: slider-scroll-md 36s linear infinite;
-      }
-      @keyframes slider-scroll-md {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-1 * (300px + 15px) * 15)); }
-      }
-    }
-    @media (max-width: 600px) {
-      .container { padding: 1.25rem 0.5rem; }
-      h1 { font-size: 1.3em; }
-      h2 { font-size: 1.1em; }
-      .slider-item { width: 220px; height: 120px; }
-      .slider-track {
-        animation: slider-scroll-sm 36s linear infinite;
-      }
-      @keyframes slider-scroll-sm {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-1 * (220px + 15px) * 15)); }
-      }
-    }
-    @media (max-width: 768px) {
-      .contact-info { grid-template-columns: 1fr; gap: 1rem; }
-      .achievements-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Header Section -->
-    <header class="header">
-      <h1>
-        Alaa <br />
-        Mohammed Ramadan Elmekkawy
-      </h1>
-      <p class="header-title">Project Manager | Civil Engineer | Visionary Project Leader</p>
-      <div class="header-cert">PMP Certified #1908392</div>
-    </header>
+html {
+  scroll-behavior:smooth;
+}
 
-    <!-- Contact Info -->
-    <section class="contact-info" aria-label="Contact Information">
-      <div class="contact-item">
-        <a href="mailto:eng.alaa.ae@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope contact-icon" aria-hidden="true"></i> eng.alaa.ae@gmail.com
-        </a>
-      </div>
-      <div class="contact-item">
-        <span><i class="fas fa-phone-alt contact-icon" aria-hidden="true"></i> +20 1002003109</span>
-      </div>
-      <div class="contact-item">
-        <a href="https://sa.linkedin.com/in/alaaelmekkawy" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
-          <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i> LinkedIn Profile
-        </a>
-      </div>
-      <div class="contact-item">
-        <a href="https://people.bayt.com/alaa-mekkawy/" target="_blank" rel="noopener" aria-label="Bayt Profile">
-          <i class="fas fa-briefcase contact-icon" aria-hidden="true"></i> Bayt Profile
-        </a>
-      </div>
-    </section>
+body {
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
 
-    <!-- Main Content -->
-    <main>
-      <!-- Professional Summary -->
-      <section class="mb-8" aria-labelledby="professional-summary-title">
-        <h2 id="professional-summary-title" class="section-title">PROFESSIONAL SUMMARY</h2>
-        <p>
-          PMP-certified Project Manager and Civil Engineer with over 20 years of exceptional experience overseeing high-profile, multi-million-dollar projects across the UAE, Saudi Arabia, and Egypt.<br /><br />
-          Specialized in managing large-scale infrastructure projects, including residential, industrial, petrochemical, and water treatment systems—ranging from complex vertical and horizontal developments to high-restricted area operations and piling works. Adept at leading diverse, cross-functional teams through the full project lifecycle, ensuring uncompromising standards of quality, safety, and budget adherence.<br />
-          Renowned for exceptional stakeholder management and risk mitigation expertise, effectively balancing technical, commercial, and procurement needs. Fluent in both English and Arabic, with outstanding communication and leadership skills that drive results and consistently exceed project objectives.
-        </p>
-      </section>
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#000,#1a1a1a,#0071e3);
+  color:white;
+  position:relative;
+}
 
-      <!-- Skills -->
-      <section id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title" class="section-title">Core Competencies & Skills</h2>
-        <p>
-          My comprehensive skill set combines deep technical civil engineering knowledge with advanced project management methodologies, ensuring successful project delivery from conception to closeout.
-        </p>
-        <div class="skills-category">
-          <h3><i class="fas fa-cogs"></i> Project Management & Leadership:</h3>
-          <div class="skills-list">
-            <span>Project Lifecycle Management</span>
-            <span>Strategic Planning & Execution</span>
-            <span>Team Leadership & Development</span>
-            <span>Stakeholder Management & Engagement</span>
-            <span>Risk Management & Mitigation</span>
-            <span>Schedule Development & Control</span>
-            <span>Budgeting & Cost Control</span>
-            <span>Quality Assurance & Control (QA/QC)</span>
-            <span>Procurement & Subcontractor Management</span>
-            <span>Contract Administration</span>
-            <span>Claims Management</span>
-            <span>Progress Reporting & Performance Monitoring</span>
-            <span>Health, Safety, and Environmental (HSE) Compliance</span>
-            <span>Change Management</span>
-            <span>Project Closeout & Handover</span>
-          </div>
-        </div>
-        <div class="skills-category">
-          <h3><i class="fas fa-hard-hat"></i> Construction & Engineering Expertise:</h3>
-          <div class="skills-list">
-            <span>Residential (Vertical & Horizontal) Construction</span>
-            <span>Industrial & Petrochemical Plant Construction</span>
-            <span>Water & Wastewater Treatment Plant (WWTP) Construction</span>
-            <span>Piling Works (Bentonite, CFA)</span>
-            <span>Structural Design Principles</span>
-            <span>Earthworks & Site Preparation</span>
-            <span>Concrete Technology & Application</span>
-            <span>MEP Coordination</span>
-            <span>Finishing Works (Super Lux, High-Level)</span>
-            <span>Site Supervision & Operations</span>
-            <span>Construction Methodologies</span>
-          </div>
-        </div>
-        <div class="skills-category">
-          <h3><i class="fas fa-laptop-code"></i> Software & Tools:</h3>
-          <div class="skills-list">
-            <span>Primavera P6 (Advanced)</span>
-            <span>AutoCAD (Advanced)</span>
-            <span>Revit (BIM)</span>
-            <span>Microsoft Project</span>
-            <span>Microsoft Office Suite (Word, Excel, PowerPoint)</span>
-            <span>General Project Management Software</span>
-          </div>
-        </div>
-        <div class="skills-category">
-          <h3><i class="fas fa-comments"></i> Interpersonal & Communication:</h3>
-          <div class="skills-list">
-            <span>Exceptional Communication (English & Arabic)</span>
-            <span>Negotiation & Conflict Resolution</span>
-            <span>Problem-Solving & Decision-Making</span>
-            <span>Team Collaboration & Motivation</span>
-            <span>Adaptability & Resilience</span>
-            <span>Mentoring & Coaching</span>
-          </div>
-        </div>
-      </section>
+.hero h1 {
+  font-size:4rem;
+  animation:fadeUp 1.5s ease;
+}
 
-      <!-- Professional Experience -->
-      <section class="mb-8" aria-labelledby="professional-experience-title">
-        <h2 id="professional-experience-title" class="section-title">PROFESSIONAL EXPERIENCE</h2>
-        <!-- Add your experience items here as before -->
-      </section>
+.hero p {
+  font-size:1.4rem;
+  margin-top:15px;
+  opacity:0.9;
+}
 
-      <!-- Education & Certifications -->
-      <section class="mb-8" aria-labelledby="education-certifications-title">
-        <h2 id="education-certifications-title" class="section-title">EDUCATION & CERTIFICATIONS</h2>
-        <!-- Your education content here -->
-      </section>
+.scroll-indicator {
+  position:absolute;
+  bottom:30px;
+  animation:bounce 2s infinite;
+}
 
-      <!-- Key Achievements -->
-      <section class="mb-8" aria-labelledby="key-achievements-title">
-        <h2 id="key-achievements-title" class="section-title">KEY ACHIEVEMENTS</h2>
-        <!-- Your achievements content here -->
-      </section>
+.section {
+  min-height:100vh;
+  padding:80px 10%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
-      <!-- Projects Gallery Slider -->
-      <section aria-label="Projects Gallery" class="mb-8">
-        <h2 class="section-title">PROJECTS GALLERY</h2>
-        <div class="slider-container" aria-live="polite" aria-atomic="true">
-          <div class="slider-track" id="slider-track">
-            <!-- 15 original slides -->
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+1" alt="Project 1" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+2" alt="Project 2" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+3" alt="Project 3" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+4" alt="Project 4" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+5" alt="Project 5" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+6" alt="Project 6" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+7" alt="Project 7" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+8" alt="Project 8" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+9" alt="Project 9" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+10" alt="Project 10" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+11" alt="Project 11" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+12" alt="Project 12" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+13" alt="Project 13" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+14" alt="Project 14" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+15" alt="Project 15" /></div>
-            <!-- Duplicate first 4 slides for seamless looping -->
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+1" alt="Project 1 duplicate" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+2" alt="Project 2 duplicate" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+3" alt="Project 3 duplicate" /></div>
-            <div class="slider-item"><img src="https://via.placeholder.com/400x250/223c63/e0e7ff?text=Project+4" alt="Project 4 duplicate" /></div>
-          </div>
-        </div>
-      </section>
-    </main>
+.glass-card {
+  background:var(--card);
+  backdrop-filter:blur(15px);
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.2);
+}
 
-    <footer>
-      <p>© 2025 Alaa Elmekkawy. All rights reserved.</p>
-    </footer>
+h2 {
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.skills-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.skill-box {
+  padding:20px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#0071e3,#00c6ff);
+  color:white;
+  text-align:center;
+  transition:0.4s;
+}
+
+.skill-box:hover {
+  transform:translateY(-10px) scale(1.05);
+}
+
+.toggle-btn {
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:1000;
+  padding:12px;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(50px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes bounce {
+  0%,100% {transform:translateY(0);}
+  50% {transform:translateY(10px);}
+}
+
+@media(max-width:768px){
+  .hero h1 {
+    font-size:2.5rem;
+  }
+}
+</style></head>
+<body><button class="toggle-btn" onclick="toggleMode()">🌙</button>
+
+<section class="hero">
+  <h1>Alaa Elmekkawy</h1>
+  <p>Project Manager | Civil Engineer | PMP</p>
+  <p>20+ Years Experience Across Egypt, Saudi Arabia & UAE</p>
+  <div class="scroll-indicator">
+    <i class="fa-solid fa-angle-down fa-2x"></i>
   </div>
-  <script>
-    // Seamless infinite slider reset
-    const sliderTrack = document.getElementById('slider-track');
-    let animationDuration = 36000; // ms, matches CSS animation duration
-    let isHovered = false;
+</section><section class="section" data-aos="fade-up">
+  <div class="glass-card">
+    <h2>About Me</h2>
+    <p>I have successfully delivered multi-million dollar construction projects including petrochemical plants, wastewater treatment facilities, residential compounds, and military facilities.</p>
+  </div>
+</section><section class="section" data-aos="fade-right">
+  <h2>Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-box">Project Management</div>
+    <div class="skill-box">Risk Management</div>
+    <div class="skill-box">Primavera</div>
+    <div class="skill-box">AutoCAD</div>
+    <div class="skill-box">Revit</div>
+    <div class="skill-box">Leadership</div>
+  </div>
+</section><section class="section" data-aos="zoom-in">
+  <div class="glass-card">
+    <h2>Major Projects</h2>
+    <p>Saudi Aramco WWTP • Petro Rabigh • Dubai Sports City Villas • UAE Military Facilities</p>
+  </div>
+</section><section class="section" data-aos="fade-left">
+  <div class="glass-card">
+    <h2>Contact</h2>
+    <p>Email: eng.alaa.ae@gmail.com</p>
+    <p>Phone: +20 100 200 3109</p>
+  </div>
+</section><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>
+AOS.init({duration:1200});
 
-    function resetSlider() {
-      sliderTrack.style.animation = 'none';
-      // Force reflow
-      void sliderTrack.offsetWidth;
-      sliderTrack.style.animation = '';
-    }
-
-    sliderTrack.addEventListener('animationiteration', resetSlider);
-
-    // Optional: Pause on hover (remove if not desired)
-    sliderTrack.addEventListener('mouseenter', () => {
-      isHovered = true;
-      sliderTrack.style.animationPlayState = 'paused';
-    });
-    sliderTrack.addEventListener('mouseleave', () => {
-      isHovered = false;
-      sliderTrack.style.animationPlayState = 'running';
-    });
-  </script>
-</body>
+function toggleMode(){
+ document.body.classList.toggle('dark');
+}
+</script></body>
 </html>
